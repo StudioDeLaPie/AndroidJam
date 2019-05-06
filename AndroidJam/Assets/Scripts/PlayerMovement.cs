@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
     public float speedPlayer = 1;
     public float minAngleToMove = 0.1f;
 
+    public Animator animator;
+
     private float horizontalMove = 0;
     private bool jump = false;
 
@@ -39,6 +41,7 @@ public class PlayerMovement : MonoBehaviour
                 if(touch.position.x > widthScreen / 2) //Si on touche a droite de l'écran
                 {
                     jump = true;
+                    animator.SetBool("IsJump", true);
                 }
                 if(touch.position.x < widthScreen / 2)//Si on touche a gauche de l'écran
                 {
@@ -46,11 +49,19 @@ public class PlayerMovement : MonoBehaviour
                 }
             }
         }
+
+        animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+
     }
 
     private void FixedUpdate()
     {
             controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
             jump = false;
+    }
+
+    public void OnLand()
+    {
+        animator.SetBool("IsJump", jump);
     }
 }

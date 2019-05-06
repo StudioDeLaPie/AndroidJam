@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
 
     private bool isBreathableEnvironement;
 
+    public Animator animator;
 
     private void Start()
     {
@@ -28,6 +29,7 @@ public class Player : MonoBehaviour
     {
         DecreaseOxygen();
         inRespiration = false;
+
     }
 
     public void IncreaseOxygen()
