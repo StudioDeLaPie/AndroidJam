@@ -14,11 +14,13 @@ public class PlayerMovement : MonoBehaviour
 
     private float widthScreen;
     private float heightScreen;
+    private Player player;
 
     void Start()
     {
         widthScreen = Screen.width;
         heightScreen = Screen.height;
+        player = GetComponent<Player>();
     }
 
     void Update()
@@ -40,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
                 }
                 if(touch.position.x < widthScreen / 2)//Si on touche a gauche de l'écran
                 {
-                    Debug.Log("Respire Connard !");
+                    player.Respiration();
                 }
             }
         }
