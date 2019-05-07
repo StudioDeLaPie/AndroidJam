@@ -17,6 +17,9 @@ public class Player : MonoBehaviour
     public UpdaterUI UpdaterUI;
     public SoundsPlayer playerSounds;
 
+    public Canvas canvas_UI;
+    public Canvas canvas_Death;
+
     private bool inRespiration = false;
 
     private bool isBreathableEnvironement;
@@ -60,9 +63,13 @@ public class Player : MonoBehaviour
         playerSounds.PLayOneShotBadInspiration();
         if (life <= 0)
         {
+            canvas_UI.gameObject.SetActive(false);
+            canvas_Death.gameObject.SetActive(true);
+
             Destroy(gameObject);
         }
     }
+
 
     public void Respiration()
     {

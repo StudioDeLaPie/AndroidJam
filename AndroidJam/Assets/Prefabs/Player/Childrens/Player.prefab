@@ -221,6 +221,8 @@ MonoBehaviour:
   animator: {fileID: 3333944617508675243}
   UpdaterUI: {fileID: 0}
   playerSounds: {fileID: 4002179507546251111}
+  canvas_UI: {fileID: 0}
+  canvas_Death: {fileID: 0}
   pieceReparation: 0
 --- !u!61 &3333944617508675221
 BoxCollider2D:
@@ -313,7 +315,6 @@ GameObject:
   - component: {fileID: 8393862637437336275}
   - component: {fileID: 3290408675528856131}
   - component: {fileID: 6755793335751539191}
-  - component: {fileID: 2534026250685658526}
   m_Layer: 9
   m_Name: SoundPlayer
   m_TagString: Untagged
@@ -949,11 +950,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!81 &2534026250685658526
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3722815303974064915}
-  m_Enabled: 1
