@@ -1,5 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!244 &-8218714104431428731
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: ac76021e13f2a1949a2dbe78911bbd33
+  m_EffectName: Attenuation
+  m_MixLevel: 4c5c90de0d60db1409df0e9da4cacad5
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!244 &-7237033746423711328
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
@@ -146,6 +160,25 @@ AudioMixerEffectController:
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
+--- !u!243 &-733240351856761934
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Ambiant
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: aa9d00163a31f874187b7e3f8fb09caf
+  m_Children: []
+  m_Volume: 301f2bdd33c238747914ca0f71804989
+  m_Pitch: 1ab3ca22ed44a4e4eb696a195847ed14
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: -8218714104431428731}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
 --- !u!243 &-313553242120431308
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -190,6 +223,7 @@ AudioMixerController:
     - 6f8f83aa85a26274e85460a0f942787d
     - bd4910438251faa419b49267de1eb609
     - 1665aaa6bbb9bec4eabe005d0d5b4973
+    - aa9d00163a31f874187b7e3f8fb09caf
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -209,6 +243,7 @@ AudioMixerGroupController:
   - {fileID: -6584974605360542096}
   - {fileID: -313553242120431308}
   - {fileID: -7119712954545064399}
+  - {fileID: -733240351856761934}
   m_Volume: 1752498381ecabe409d5197b35353c60
   m_Pitch: eb687fb83e1fe4f469d25c6f295f2bda
   m_Send: 00000000000000000000000000000000
@@ -243,6 +278,7 @@ AudioMixerSnapshotController:
   m_SnapshotID: 9330f4c76832aa64f897f6a07df4e1ed
   m_FloatValues:
     6c832f819df231b4b82814ae8c0c1d21: 9.260412
+    301f2bdd33c238747914ca0f71804989: -11.400904
     8221b0ffb77da804bae4bb20d2b8045e: 9.260412
   m_TransitionOverrides: {}
 --- !u!244 &441755576414221441
