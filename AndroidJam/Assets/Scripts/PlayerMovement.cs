@@ -30,21 +30,30 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        //SI le téléphone penche assez on déplace le joueur
+        //Si le téléphone penche assez on déplace le joueur
         if (Mathf.Abs(Input.acceleration.x) > minAngleToMove)
         {
+            //Debug.Log(jump);
             horizontalMove = Mathf.Sign(Input.acceleration.x) * Mathf.Clamp(Mathf.Abs(Input.acceleration.x), minAngleToMove, maxAngleToMove) * speedPlayer;
-            playerSounds.PlayeFootStep();
+            if (controller.Grounded)
+                playerSounds.PlayFootStep();
+            else
+            {
+                playerSounds.StopFootStep();
+                Debug.Log(jump + "Je stop le son parceque je suis en l'ai et en mouvement");
+            }
         }
         else
+        {
             horizontalMove = 0;
+        }
 
         //Si on detecte un touchScreen
-        if(Input.touches.Length > 0)
+        if (Input.touches.Length > 0)
         {
             foreach (Touch touch in Input.touches) //Position (0,0) est en bas à gauche de l'écran
             {
-                if(touch.position.x > widthScreen / 2) //Si on touche a droite de l'écran
+                if (touch.position.x > widthScreen / 2) //Si on touche a droite de l'écran
                 {
                     jump = true;
                     animator.SetBool("IsJump", true);
@@ -71,8 +80,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-            controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
-            jump = false;
+        controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
+        jump = false;
     }
 
     public void OnLand()

@@ -32,6 +32,7 @@ public class SoundsPlayer : MonoBehaviour
         if (!AudoiSource_jump.isPlaying)
         {
             AudoiSource_jump.PlayOneShot(jump);
+            AudioSource_footSteps.Stop();
             //Debug.Log("Jump");
         }
     }
@@ -63,12 +64,17 @@ public class SoundsPlayer : MonoBehaviour
         }
     }
 
-    public void PlayeFootStep()
+    public void PlayFootStep()
     {
         if(!AudioSource_footSteps.isPlaying)
         {
             AudioSource_footSteps.PlayOneShot(NextFootStepSound());
         }
+    }
+
+    public void StopFootStep()
+    {
+        AudioSource_footSteps.Stop();
     }
 
     private AudioClip NextFootStepSound()
