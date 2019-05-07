@@ -13,11 +13,16 @@ public class Player : MonoBehaviour
     public float oxygenGain = 0.5f;
     public float lifeLost = 0.2f;
 
+    public Animator animator;
+
+    public UpdaterUI UpdaterUI;
+
     private bool inRespiration = false;
 
     private bool isBreathableEnvironement;
 
-    public Animator animator;
+
+    public bool pieceReparation = false;
 
     private void Start()
     {
@@ -72,6 +77,28 @@ public class Player : MonoBehaviour
             DecreaseLife();
         }
     }
+
+    public bool TakePieceReparation()
+    {
+        if (pieceReparation)
+        {
+            return false; //Le joueur a deja une pièce
+        }
+        else//Si le joueur n'a pas de pièce
+        {
+            pieceReparation = true;
+            UpdaterUI.PieceReparationUI(true);
+            return true; //C'est bon le player a récupéré la pièce
+        }
+
+    }
+
+    public void lossPieceReparation()
+    {
+        pieceReparation = false;
+        UpdaterUI.PieceReparationUI(false);
+    }
+
 
     public float Oxygen { get => oxygen; set => oxygen = value; }
     public float Life { get => life; set => life = value; }
