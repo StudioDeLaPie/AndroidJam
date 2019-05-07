@@ -215,9 +215,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxOxygen: 100
   maxLife: 100
-  oxygenLost: 0.1
-  oxygenGain: 15
-  lifeLost: 0.5
+  oxygenLost: 6
+  oxygenGain: 1000
+  lifeLost: 30
   animator: {fileID: 3333944617508675243}
   UpdaterUI: {fileID: 0}
   playerSounds: {fileID: 4002179507546251111}

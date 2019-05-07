@@ -41,14 +41,14 @@ public class Player : MonoBehaviour
 
     public void IncreaseOxygen()
     {
-        oxygen = Mathf.Clamp(oxygen + oxygenGain, 0, maxOxygen);
+        oxygen = Mathf.Clamp(oxygen + oxygenGain * Time.deltaTime, 0, maxOxygen);
     }
 
     public void DecreaseOxygen()
     {
         if (!inRespiration)
         {
-            oxygen -= oxygenLost;
+            oxygen -= oxygenLost * Time.deltaTime;
             if (oxygen < 0)
             {
                 oxygen = 0;
@@ -59,7 +59,7 @@ public class Player : MonoBehaviour
 
     public void DecreaseLife()
     {
-        life -= lifeLost;
+        life -= lifeLost *Time.deltaTime;
         playerSounds.PLayOneShotBadInspiration();
         if (life <= 0)
         {
@@ -69,7 +69,6 @@ public class Player : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
 
     public void Respiration()
     {
