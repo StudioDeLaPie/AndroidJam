@@ -12,5 +12,7 @@ public class OxygenZone : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         collision.gameObject.GetComponent<Player>().IsBreathableEnvironement = false;
+        collision.GetComponentInChildren<SoundsPlayer>().CanPlayGoodInspiration = true;
+
     }
 }

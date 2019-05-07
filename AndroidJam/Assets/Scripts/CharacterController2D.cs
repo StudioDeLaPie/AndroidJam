@@ -19,6 +19,8 @@ public class CharacterController2D : MonoBehaviour
 	private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 	private Vector3 m_Velocity = Vector3.zero;
 
+    public SoundsPlayer playerSounds;
+
 	[Header("Events")]
 	[Space]
 
@@ -30,7 +32,8 @@ public class CharacterController2D : MonoBehaviour
 	public BoolEvent OnCrouchEvent;
 	private bool m_wasCrouching = false;
 
-	private void Awake()
+
+    private void Awake()
 	{
 		m_Rigidbody2D = GetComponent<Rigidbody2D>();
 
@@ -130,7 +133,8 @@ public class CharacterController2D : MonoBehaviour
 			m_Grounded = false;
 			//m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
             m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, m_JumpForce);
-		}
+            playerSounds.PLayOneShotJump();
+        }
 	}
 
 

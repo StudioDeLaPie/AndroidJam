@@ -11,9 +11,11 @@ public class PlayerMovement : MonoBehaviour
     public float maxAngleToMove = 0.3f;
 
     public Animator animator;
+    public SoundsPlayer playerSounds;
 
     private float horizontalMove = 0;
     private bool jump = false;
+    private bool respirationPressed = false;
 
     private float widthScreen;
     private float heightScreen;
@@ -28,10 +30,12 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(Input.acceleration.x);
         //SI le téléphone penche assez on déplace le joueur
         if (Mathf.Abs(Input.acceleration.x) > minAngleToMove)
+        {
             horizontalMove = Mathf.Sign(Input.acceleration.x) * Mathf.Clamp(Mathf.Abs(Input.acceleration.x), minAngleToMove, maxAngleToMove) * speedPlayer;
+            playerSounds.PlayeFootStep();
+        }
         else
             horizontalMove = 0;
 
@@ -45,15 +49,24 @@ public class PlayerMovement : MonoBehaviour
                     jump = true;
                     animator.SetBool("IsJump", true);
                 }
-                if(touch.position.x < widthScreen / 2)//Si on touche a gauche de l'écran
+
+                if (touch.position.x < widthScreen / 2)//Si on touche a gauche de l'écran
                 {
                     player.Respiration();
+                    respirationPressed = true;
+                }
+                else//La touche saut est préssée sans la touche respiration
+                {
+                    playerSounds.CanPlayGoodInspiration = true;
                 }
             }
         }
+        else//Aucune touche n'est préssée 
+        {
+            playerSounds.CanPlayGoodInspiration = true;
+        }
 
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
-
     }
 
     private void FixedUpdate()

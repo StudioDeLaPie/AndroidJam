@@ -14,8 +14,8 @@ public class Player : MonoBehaviour
     public float lifeLost = 0.2f;
 
     public Animator animator;
-
     public UpdaterUI UpdaterUI;
+    public SoundsPlayer playerSounds;
 
     private bool inRespiration = false;
 
@@ -34,7 +34,6 @@ public class Player : MonoBehaviour
     {
         DecreaseOxygen();
         inRespiration = false;
-
     }
 
     public void IncreaseOxygen()
@@ -58,6 +57,7 @@ public class Player : MonoBehaviour
     public void DecreaseLife()
     {
         life -= lifeLost;
+        playerSounds.PLayOneShotBadInspiration();
         if (life <= 0)
         {
             Destroy(gameObject);
@@ -71,6 +71,7 @@ public class Player : MonoBehaviour
         if (isBreathableEnvironement)//Si je suis dans une zone d'oxygen
         {
             IncreaseOxygen();
+            playerSounds.PlayOneShotGoodInspiration();
         }
         else
         {
@@ -88,15 +89,19 @@ public class Player : MonoBehaviour
         {
             pieceReparation = true;
             UpdaterUI.PieceReparationUI(true);
+            playerSounds.PLayOneShotTakePiece();
             return true; //C'est bon le player a récupéré la pièce
         }
-
     }
 
     public void lossPieceReparation()
     {
-        pieceReparation = false;
-        UpdaterUI.PieceReparationUI(false);
+        if (pieceReparation)
+        {
+            pieceReparation = false;
+            UpdaterUI.PieceReparationUI(false);
+            playerSounds.PlayOneShotLossPiece();
+        }
     }
 
 
