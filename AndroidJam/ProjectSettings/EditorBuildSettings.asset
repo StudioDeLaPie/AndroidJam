@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: "Assets/Scenes/ScenePr\xE9sentation.unity"
     guid: f136f457f46d2304499a1ce21bc5a2f2
   - enabled: 1
-    path: Assets/Scenes/Test1.unity
+    path: Assets/Scenes/MainLevel.unity
     guid: d0bf49b516b2ea14e92cc5287c1a2741
   - enabled: 1
     path: Assets/Scenes/EndScreen.unity
