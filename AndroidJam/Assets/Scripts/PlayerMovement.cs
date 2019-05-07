@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
 
     public float speedPlayer = 1;
     public float minAngleToMove = 0.1f;
+    public float maxAngleToMove = 0.3f;
 
     public Animator animator;
 
@@ -27,9 +28,10 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(Input.acceleration.x);
         //SI le téléphone penche assez on déplace le joueur
         if (Mathf.Abs(Input.acceleration.x) > minAngleToMove)
-            horizontalMove = Input.acceleration.x * speedPlayer;
+            horizontalMove = Mathf.Sign(Input.acceleration.x) * Mathf.Clamp(Mathf.Abs(Input.acceleration.x), minAngleToMove, maxAngleToMove) * speedPlayer;
         else
             horizontalMove = 0;
 

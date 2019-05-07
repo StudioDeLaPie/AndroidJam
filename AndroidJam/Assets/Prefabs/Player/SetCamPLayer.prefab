@@ -184,7 +184,7 @@ PrefabInstance:
     - target: {fileID: 4793004446045470044, guid: 45025071266d88d46a661f6479d1b6c5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.0000009536743
+      value: -0.00000071525574
       objectReference: {fileID: 0}
     - target: {fileID: 4793004446045470044, guid: 45025071266d88d46a661f6479d1b6c5,
         type: 3}
@@ -347,10 +347,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3333944617508675218, guid: 2dce0aa6216fb5e42b76cad19d6ee9f6,
+        type: 3}
+      propertyPath: speedPlayer
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3333944617508675218, guid: 2dce0aa6216fb5e42b76cad19d6ee9f6,
+        type: 3}
+      propertyPath: maxAngleToMove
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 3333944617508675217, guid: 2dce0aa6216fb5e42b76cad19d6ee9f6,
         type: 3}
       propertyPath: m_GravityScale
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3333944617508675216, guid: 2dce0aa6216fb5e42b76cad19d6ee9f6,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 361745693
+      objectReference: {fileID: 0}
+    - target: {fileID: 3333944617508675216, guid: 2dce0aa6216fb5e42b76cad19d6ee9f6,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3333944617508675222, guid: 2dce0aa6216fb5e42b76cad19d6ee9f6,
         type: 3}
@@ -412,7 +432,7 @@ PrefabInstance:
     - target: {fileID: 4002107106346120799, guid: a7504f514465fcf48938a6fa0cbf9576,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.0000009536743
+      value: -0.00000071525574
       objectReference: {fileID: 0}
     - target: {fileID: 4002107106346120799, guid: a7504f514465fcf48938a6fa0cbf9576,
         type: 3}
@@ -464,6 +484,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4002107106346120798, guid: a7504f514465fcf48938a6fa0cbf9576,
+        type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.33134568
+      objectReference: {fileID: 0}
+    - target: {fileID: 4002107106346120798, guid: a7504f514465fcf48938a6fa0cbf9576,
+        type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.748787
+      objectReference: {fileID: 0}
+    - target: {fileID: 4002107106346120798, guid: a7504f514465fcf48938a6fa0cbf9576,
+        type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.9622642
+      objectReference: {fileID: 0}
+    - target: {fileID: 4002107106346120798, guid: a7504f514465fcf48938a6fa0cbf9576,
+        type: 3}
+      propertyPath: m_BackGroundColor.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4002107107987057189, guid: a7504f514465fcf48938a6fa0cbf9576,
         type: 3}
       propertyPath: player
@@ -477,17 +517,17 @@ PrefabInstance:
     - target: {fileID: 4002107107705188702, guid: a7504f514465fcf48938a6fa0cbf9576,
         type: 3}
       propertyPath: m_fontSize
-      value: 25.3
+      value: 24.85
       objectReference: {fileID: 0}
     - target: {fileID: 4002107106174385709, guid: a7504f514465fcf48938a6fa0cbf9576,
         type: 3}
       propertyPath: m_fontSize
-      value: 25.3
+      value: 24.85
       objectReference: {fileID: 0}
     - target: {fileID: 4002107106579452004, guid: a7504f514465fcf48938a6fa0cbf9576,
         type: 3}
       propertyPath: m_fontSize
-      value: 46.9
+      value: 46.05
       objectReference: {fileID: 0}
     - target: {fileID: 4002107106579452004, guid: a7504f514465fcf48938a6fa0cbf9576,
         type: 3}
@@ -497,7 +537,7 @@ PrefabInstance:
     - target: {fileID: 4002107106824737956, guid: a7504f514465fcf48938a6fa0cbf9576,
         type: 3}
       propertyPath: m_fontSize
-      value: 30.3
+      value: 29.75
       objectReference: {fileID: 0}
     - target: {fileID: 4002107106824737956, guid: a7504f514465fcf48938a6fa0cbf9576,
         type: 3}
