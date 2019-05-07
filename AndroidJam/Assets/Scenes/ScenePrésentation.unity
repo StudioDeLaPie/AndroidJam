@@ -1214,7 +1214,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: "Utilise la partie gauche de ton \xE9cran pour inspirer. Attention, si tu
-    n'as plus d'oxyg\xE8ne ou que tu inspires en dehors d'une poche, ta sant\xE9 diminuera."
+    n'as plus d'air ou que tu inspires en dehors d'une poche d'oxyg\xE8ne, ta sant\xE9
+    diminuera."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1242,7 +1243,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 72
+  m_fontSize: 48.35
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1283,12 +1284,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 296409435}
-    characterCount: 151
+    characterCount: 157
     spriteCount: 0
-    spaceCount: 25
-    wordCount: 26
+    spaceCount: 26
+    wordCount: 27
     linkCount: 0
-    lineCount: 5
+    lineCount: 7
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -1731,7 +1732,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 34.6
+  m_fontSize: 51.9
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2425,8 +2426,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 972901915}
-  m_RootOrder: 1
+  m_Father: {fileID: 1128957689}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 360}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.07, y: 0.16821429}
@@ -2884,7 +2885,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1128957689}
-  - {fileID: 774839869}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3152,6 +3152,7 @@ RectTransform:
   - {fileID: 1673158975}
   - {fileID: 35283419}
   - {fileID: 2114459692}
+  - {fileID: 774839869}
   m_Father: {fileID: 972901915}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4287,7 +4288,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 72
+  m_fontSize: 48.8
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4333,7 +4334,7 @@ MonoBehaviour:
     spaceCount: 26
     wordCount: 27
     linkCount: 0
-    lineCount: 6
+    lineCount: 9
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -4891,7 +4892,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1957360585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5149,7 +5150,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1968672284
 MonoBehaviour:
   m_ObjectHideFlags: 0
