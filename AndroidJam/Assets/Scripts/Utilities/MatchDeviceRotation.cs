@@ -7,6 +7,8 @@ namespace Utilities
 
     public class MatchDeviceRotation : MonoBehaviour
     {
+
+        public bool inverseRotation = false;
         public float softRotationSpeed = 20f;
         public float hardRotationSpeed = 80f;
         public float angleSoftTreshold = 2f;
@@ -18,7 +20,9 @@ namespace Utilities
             Vector3 inputProjection = Vector3.ProjectOnPlane(-Input.acceleration, Vector3.forward).normalized;
             float angle = Mathf.Rad2Deg * Mathf.Atan(inputProjection.y / inputProjection.x);
             angle = Mathf.Sign(angle) * Mathematiques.Map(Mathf.Abs(angle), 90, 0, 0, 90);
-            Quaternion newRot = Quaternion.Euler(0, 0, angle);
+
+            Quaternion newRot = Quaternion.Euler(0, 0, inverseRotation ? -angle : angle);
+
             if (Quaternion.Angle(oldRot, newRot) > angleHardTreshold)
                 transform.rotation = Quaternion.RotateTowards(oldRot, newRot, hardRotationSpeed * Time.deltaTime);
             else if (Quaternion.Angle(oldRot, newRot) > angleSoftTreshold)

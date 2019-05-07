@@ -1,20 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SpaceShip : MonoBehaviour
 {
-
-    private int nbPiecesTotal;
-    private int nbPiecesCollected = 0;
-
-    private void Start()
-    {
-        nbPiecesTotal = GameObject.FindGameObjectsWithTag("Piece").Length;
-    }
+    public LevelManager level;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        collision.GetComponent<Player>().lossPieceReparation();
+        Player player = collision.GetComponent<Player>();
+        if (player != null)
+        {
+            if (player.pieceReparation)
+            {
+                player.lossPieceReparation();
+                level.IncreasePieceCount();
+            }
+        }
     }
 }
