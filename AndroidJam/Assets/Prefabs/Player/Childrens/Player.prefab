@@ -104,8 +104,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 361745693
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 99d492d0359f6b04a92c101c8ef38552, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -133,7 +133,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccd1adb6254ab384185fb7cba3d516a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 5
+  m_JumpForce: 14.5
   m_CrouchSpeed: 0.4
   m_MovementSmoothing: 0.05
   m_AirControl: 1
@@ -161,7 +161,7 @@ MonoBehaviour:
   m_GroundCheck: {fileID: 3333944617120148056}
   m_CeilingCheck: {fileID: 3333944618496556074}
   m_CrouchDisableCollider: {fileID: 0}
-  playerSounds: {fileID: 0}
+  playerSounds: {fileID: 4002179507546251111}
   OnLandEvent:
     m_PersistentCalls:
       m_Calls:
@@ -196,11 +196,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 3333944617508675222}
-  speedPlayer: 50
+  speedPlayer: 100
   minAngleToMove: 0.1
   maxAngleToMove: 0.3
   animator: {fileID: 3333944617508675243}
-  playerSounds: {fileID: 0}
+  playerSounds: {fileID: 4002179507546251111}
 --- !u!114 &3333944617508675220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,12 +215,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxOxygen: 100
   maxLife: 100
-  oxygenLost: 0.05
-  oxygenGain: 0.2
-  lifeLost: 0.08
+  oxygenLost: 0.1
+  oxygenGain: 15
+  lifeLost: 0.5
   animator: {fileID: 3333944617508675243}
   UpdaterUI: {fileID: 0}
-  playerSounds: {fileID: 0}
+  playerSounds: {fileID: 4002179507546251111}
   pieceReparation: 0
 --- !u!61 &3333944617508675221
 BoxCollider2D:

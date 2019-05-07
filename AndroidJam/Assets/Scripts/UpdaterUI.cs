@@ -8,19 +8,21 @@ public class UpdaterUI : MonoBehaviour
 {
     public Player player;
 
-    public TextMeshProUGUI UI_Oxygen;
-    public TextMeshProUGUI UI_Life;
+    public Slider slider_Oxygen;
+    public Slider slider_Life;
     public Button pieceReparation;
 
     private void Start()
     {
         pieceReparation.interactable = false;
+        slider_Oxygen.maxValue = player.maxOxygen;
+        slider_Life.maxValue = player.maxLife;
     }
 
     void Update()
     {
-        UI_Oxygen.text = player.Oxygen.ToString("000.0");
-        UI_Life.text = player.Life.ToString("000.0");
+        slider_Oxygen.value = player.Oxygen;
+        slider_Life.value = player.Life;
     }
 
     public void PieceReparationUI(bool havePiece)

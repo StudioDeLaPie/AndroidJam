@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4793004446045470044}
   - component: {fileID: 4793004446045470047}
   - component: {fileID: 4793004446045470045}
+  - component: {fileID: 1362009881}
   m_Layer: 0
   m_Name: CM
   m_TagString: Untagged
@@ -87,6 +88,22 @@ MonoBehaviour:
   m_BoundingShape2D: {fileID: 0}
   m_ConfineScreenEdges: 1
   m_Damping: 0.37
+--- !u!114 &1362009881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4793004446045470046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f1b53e9649c0d7468cdadbaaca47786, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  softRotationSpeed: 20
+  hardRotationSpeed: 80
+  angleSoftTreshold: 2
+  angleHardTreshold: 10
 --- !u!1 &4793004446478934018
 GameObject:
   m_ObjectHideFlags: 0
@@ -178,14 +195,14 @@ MonoBehaviour:
   m_YDamping: 1
   m_ZDamping: 1
   m_ScreenX: 0.5
-  m_ScreenY: 0.5
+  m_ScreenY: 0.558
   m_CameraDistance: 10
-  m_DeadZoneWidth: 0.039
-  m_DeadZoneHeight: 0.096
+  m_DeadZoneWidth: 0.183
+  m_DeadZoneHeight: 0.256
   m_DeadZoneDepth: 0
   m_UnlimitedSoftZone: 0
-  m_SoftZoneWidth: 0.8
-  m_SoftZoneHeight: 0.8
+  m_SoftZoneWidth: 0.6
+  m_SoftZoneHeight: 0.73
   m_BiasX: 0
   m_BiasY: 0
   m_CenterOnActivate: 1
