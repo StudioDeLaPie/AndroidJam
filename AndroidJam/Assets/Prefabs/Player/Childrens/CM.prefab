@@ -100,8 +100,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f1b53e9649c0d7468cdadbaaca47786, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  softRotationSpeed: 20
-  hardRotationSpeed: 80
+  inverseRotation: 0
+  softRotationSpeed: 40
+  hardRotationSpeed: 160
   angleSoftTreshold: 2
   angleHardTreshold: 10
 --- !u!1 &4793004446478934018

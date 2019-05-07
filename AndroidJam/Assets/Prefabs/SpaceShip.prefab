@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 3022673307098290971}
   - component: {fileID: 1215162154549493858}
   - component: {fileID: 3075892152803556112}
-  m_Layer: 0
+  - component: {fileID: 540961122}
+  m_Layer: 10
   m_Name: SpaceShip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,6 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2fdcad0882846a409d82a92ec32b576, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: {fileID: 0}
 --- !u!61 &3075892152803556112
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -106,10 +108,10 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.20543718, y: 0.20543957}
+  m_Offset: {x: -0.03012538, y: 0.071648836}
   m_SpriteTilingProperty:
     border: {x: 1.79, y: 0.38, z: 2.22, w: 0.12}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.4600442, y: 0.59867495}
     oldSize: {x: 5, y: 2.24}
     newSize: {x: 5, y: 2.24}
     adaptiveTilingThreshold: 0.5
@@ -117,5 +119,24 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1455736, y: 1.9856472}
+  m_Size: {x: 1.1640275, y: 1.7180657}
   m_EdgeRadius: 0
+--- !u!95 &540961122
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2273782897487920905}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
