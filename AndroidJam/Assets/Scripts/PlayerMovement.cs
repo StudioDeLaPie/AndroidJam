@@ -40,7 +40,6 @@ public class PlayerMovement : MonoBehaviour
             else
             {
                 playerSounds.StopFootStep();
-                Debug.Log(jump + "Je stop le son parceque je suis en l'ai et en mouvement");
             }
         }
         else
